@@ -57,5 +57,5 @@ public class Medico {
         this.ativo = false;
     }
 
-    // Teste 
+    // Teste
 }
