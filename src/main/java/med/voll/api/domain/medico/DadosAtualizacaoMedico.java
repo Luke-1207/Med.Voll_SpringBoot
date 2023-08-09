@@ -10,6 +10,7 @@ public record DadosAtualizacaoMedico(
 
         String nome,
         String telefone,
-        @Valid DadosEndereco endereco) {
+        @Valid DadosEndereco endereco,
+        Boolean ativo) {
 
 }
