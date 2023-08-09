@@ -39,7 +39,7 @@ public class TokenService {
             return JWT.require(algoritmo)
                     .withIssuer("API Voll.med")
                     .build()
-                    .verify(tokenJWT) 
+                    .verify(tokenJWT)
                     .getSubject();
 
         }catch(JWTVerificationException exception){
