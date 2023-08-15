@@ -19,7 +19,7 @@ public class ValidadorPacienteSemOutraConsultaNoDia implements ValidadorAgendame
                 primeiroHorario, ultimoHorario);
 
         if(pacientePossuiOutraConsultaNoDia){
-            throw new ValidacaoException("Pacuente já possui uma consulta agendada nesse dia.");
+            throw new ValidacaoException("Paciente já possui uma consulta agendada nesse dia.");
         }
     }
 }
