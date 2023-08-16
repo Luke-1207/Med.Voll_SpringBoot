@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class AgendaDeConsultas {
@@ -62,4 +63,14 @@ public class AgendaDeConsultas {
        //return null;
     }
 
+    public boolean excluirConsulta(Long id) {
+        Optional<Consulta> consultaOptional = consultaRepository.findById(id);
+
+        if(consultaOptional.isPresent()){
+            consultaRepository.delete(consultaOptional.get());
+            return true;
+        }else{
+            return false;
+        }
+    }
 }
