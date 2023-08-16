@@ -7,6 +7,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import med.voll.api.domain.endereco.Endereco;
 
+import java.time.LocalDateTime;
+
 @Table(name = "medicos")
 @Entity(name = "Medico")
 @Getter
@@ -60,5 +62,4 @@ public class Medico {
         this.ativo = false;
     }
 
-    // Teste
 }
