@@ -25,6 +25,11 @@ public class Usuario implements UserDetails {
     private String login;
     private String senha;
 
+    public Usuario(DadosAutenticacao dados) {
+        this.login = dados.login();
+        this.senha = dados.senha();
+    }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority("ROLE_USER"));
@@ -58,5 +63,9 @@ public class Usuario implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
+    }
+
+    public void setPassword(String senha){
+        this.senha = senha;
     }
 }
